@@ -1,0 +1,2 @@
+This game will be a top down shooter where you have to fight against waves of enemies to survive or accomplish
+certain tasks. Players will also have units allied to them.
