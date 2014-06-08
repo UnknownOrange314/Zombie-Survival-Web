@@ -94,16 +94,16 @@ test("Entity distance test",function(){
     //Check if distance to a location can be calculated.
     equal(e1.locDistance(new Vector(4.0,3.0)),5);
 
-})
+});
 
 test("Entity movement test",function(){
     var e1=new Entity(new Vector(0.0,0.0),new Vector(1.0,0.0),3,Math.PI/180);
     var e2=new Entity(new Vector(1.0,0.0),new Vector(1.0,1.0),3,Math.PI/180);
 
     //Check if moving works.
-    ok(e1.distance(e2)==1);
+    ok(e1.entityDistance(e2)==1);
     e1.move();
-    ok(e1.distance(e2)==0);
+    ok(e1.entityDistance(e2)==0);
     //Check if rotating works.
     for(var i=0;i<90;i++){
         e1.rotateLeft();
@@ -120,16 +120,12 @@ test("Entity movement test",function(){
     ok(dist<0.00001,dist);
 });
 
+test("Entity Size Test",function(){
+    var e1=new Entity(null,null,10);
+    equal(e1.getSize(),10);
+})
 
-test("Entity detection test",function(){
-    var center=new Entity(new Vector(0.0,0.0),new Vector(1.0,1.0),1);
-    var frontNear=new Entity(new Vector(1.0,1.0),new Vector(2.0,2.0),1);
-    var frontFar=new Entity(new Vector(3.0,3.0),new Vector(1.0,1.0),1);
-    var back=new Entity(new Vector(-1.0,-1.0),new Vector(1.0,1.0),1);
-    ok(center.nearbyMove(frontNear));
-    ok(!center.nearbyMove(frontFar));
-    ok(!center.nearbyMove(back));
-});
+
 
 test("Zombie Move Test",function(){
 
@@ -144,7 +140,7 @@ test("Zombie Move Test",function(){
     z=new Zombie();
     equal(z.determineMove(new Vector(200,200),eVect).angle(),5*Math.PI/4);
 
-})
+});
 
 /**
  * These are tests on types of attacks that can be done.
@@ -174,22 +170,97 @@ test("Pistol Attack",function(){
     equal(Object.keys(d1).length,1)
 });
 
+test("Hash Set size test",function(){
+    var data=new HashSet(function(entity){
+       return entity.hashCode();
+    });
+    var e=new Entity();
+    data.push(e);
+    data.push(e);
+    equal(data.size(),1);
+
+});
+
 /**
  * Tests to see if grid transformations work
  */
 test("Grid transformation test",function(){
 
-})
+    var eData=new EntityData(1024,32);
+
+    var tLoc=eData.toGridCoordinates(new Vector(1,1));
+    equal(tLoc.getX(),0);
+    equal(tLoc.getY(),0);
+
+    var t2Loc=eData.toGridCoordinates(new Vector(1020,1020));
+    equal(t2Loc.getX(),31);
+    equal(t2Loc.getY(),31);
+
+    var t3Loc=eData.toWorldCoordinates(new Vector(31,31));
+    equal(t3Loc.getX(),992);
+    equal(t3Loc.getY(),992);
+
+    var t4Loc=eData.toWorldCoordinates(new Vector(0,0));
+    equal(t4Loc.getX(),0);
+    equal(t4Loc.getY(),0);
+
+});
+
+test("Add test",function(){
+    var eData=new EntityData(1024,32);
+    var e=new Entity(new Vector(200,200));
+    var e2=new Entity(new Vector(234,889));
+    eData.push(e);
+    eData.push(e);
+    eData.push(e2);
+    equal(eData.size(),2);
+});
+
+test("Remove test",function(){
+    var eData=new EntityData(1024,32);
+    var e=new Entity(new Vector(200,200));
+    var e2=new Entity(new Vector(234,889));
+    eData.push(e);
+    eData.push(e);
+    eData.push(e2);
+    eData.remove(e);
+    equal(eData.size(),1);
+});
 
 /**
  * Tests to see if entities can be stored in a manner that allows for efficient collision detection.
  */
 test("Nearby line test",function(){
 
-})
+    var eData=new EntityData(1024,32);
+    var start=new Vector(0,0);
+    var end=new Vector(1000,1000);
+    eData.push(new Entity(new Vector(1010,1010),null,10));
+    eData.push(new Entity(new Vector(500,102),null,999));
+    var near1=new Vector(200,200);
+    var near2=new Vector(201,199);
+    eData.push(new Entity(near1),null,1);
+    eData.push(new Entity(near2),null,1);
+
+    var nearPoints=eData.nearbyLine(start,end,10);
+    equal(nearPoints.length,3);
+    ok(nearPoints.indexOf(near1)!=-1);
+    ok(nearPoints.indexOf(near2)!=-1);
+
+
+});
 
 test("Nearby point test",function(){
-
+    var eData=new EntityData(1024,32);
+    eData.push(new Entity(new Vector(200,200),null,5));
+    eData.push(new Entity(new Vector(99,101),null,5));
+    eData.push(new Entity(new Vector(101,99),null,5));
+    eData.push(new Entity(new Vector(100,200),null,5));
+    var nearPoints=eData.nearbyPoint(new Vector(100,100),5);
+    equal(nearPoints.length,2);
+    nearPoints.forEach(function(pt){
+        ok(pt.locDistance(new Vector(100,100))<5);
+    })
 });
 
 test("GameManager Test",function(){
@@ -199,6 +270,4 @@ test("GameManager Test",function(){
         -See if the map receives commands and takes the appropriate action(Commands listed in human section)
         -See if the zombies do something each time the game state is updated.
      */
-})
-
-
+});

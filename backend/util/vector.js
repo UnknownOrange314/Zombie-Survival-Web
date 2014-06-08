@@ -19,7 +19,6 @@ Vector.prototype.getY=function(){
 }
 
 Vector.prototype.distance=function(other){
-    console.log(other);
     return Math.sqrt(Math.pow(other._x-this._x,2)+Math.pow(other._y-this._y,2));
 }
 

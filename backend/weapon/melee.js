@@ -18,7 +18,6 @@ Melee.prototype.attack=function(aLoc,others){
     var obj=this;
     var dMap={};
     others.forEach(function(other){
-        console.log(other+":"+aLoc);
         var dist=other.locDistance(aLoc);
         if(dist<obj._range){
             dMap[other.getLocation()]=obj._damage;

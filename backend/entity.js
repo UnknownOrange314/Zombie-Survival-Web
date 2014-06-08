@@ -8,14 +8,19 @@
  * @param attack The way the entity attacks
  * @constructor
  */
-function Entity(loc,speed,size,tSpeed,eType,attack){
+function Entity(loc,speed,size,tSpeed,eType){
     this._location=loc;
     this._speed=speed;
     this._size=size;
     this._turnSpeed=tSpeed;
     this._entityType=eType;
     this._hitPoints=100;
+
+    this._ID=Entity.count; //Constant variable that represents ID.
+    Entity.count++;
 }
+
+
 
 /**
  * Rotates the entity by 1 degree
@@ -43,7 +48,7 @@ Entity.prototype.move=function(){
  * The distance of the entity from another as an integer
  * @param other The other entity.
  */
-Entity.prototype.distance=function(other){
+Entity.prototype.entityDistance=function(other){
     return this._location.distance(other._location);
 }
 
@@ -59,16 +64,12 @@ Entity.prototype.locDistance=function(other){
  * This function checks to see if the entity will collide with another entity upon movement.
  * @param other
  */
-Entity.prototype.nearbyMove=function(other){
+Entity.prototype.nextMove=function(other){
     var myLoc=this._location;
     var oLoc=other._location;
     var nextMove=this._location.clone();
     nextMove.add(this._speed);
-    var eDist=nextMove.distance(oLoc);
-    if(eDist-this._size-other._size<0){
-        return true;
-    }
-    return false;
+    return nextMove;
 }
 
 Entity.prototype.getLocation=function(){
@@ -89,4 +90,14 @@ Entity.prototype.getName=function(){
     }
     return "Default Entity";
 }
+
+Entity.prototype.hashCode=function(){
+    return this._ID;
+}
+
+Entity.prototype.getSize=function(){
+    return this._size;
+}
+
+Entity.count=0;
 
