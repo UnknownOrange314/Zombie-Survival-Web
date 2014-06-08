@@ -1,3 +1,10 @@
+/**
+ * A vector object. All calculations are done assuming y increases
+ * as you go up.
+ * @param xPos
+ * @param yPos
+ * @constructor
+ */
 function Vector(xPos,yPos){
     this._x=xPos;
     this._y=yPos;
@@ -12,6 +19,7 @@ Vector.prototype.getY=function(){
 }
 
 Vector.prototype.distance=function(other){
+    console.log(other);
     return Math.sqrt(Math.pow(other._x-this._x,2)+Math.pow(other._y-this._y,2));
 }
 
@@ -79,4 +87,15 @@ Vector.prototype.rotate=function(rot){
     var mul=this.magnitude();
     this._x=mul*Math.cos(nAng);
     this._y=mul*Math.sin(nAng);
+}
+
+/**
+ * Returns a vector pointing from the current vector to a destination vector.
+ * @param dest The destination vector.
+ */
+Vector.prototype.vectorTo=function(dest){
+    return new Vector(dest._x-this._x,dest._y-this._y);
+}
+Vector.prototype.toString=function(){
+    return this._x+":"+this._y;
 }

@@ -3,20 +3,25 @@
  * @param loc Where the entity is located on the map.
  * @param speed How fast the entity can move.
  * @param size How big the object is. The entity is represented as a circle.
+ * @param tSpeed The turning speed of the entity.
+ * @param eType An object representing the behavior of the entity.
+ * @param attack The way the entity attacks
  * @constructor
  */
-function Entity(loc,speed,size){
+function Entity(loc,speed,size,tSpeed,eType,attack){
     this._location=loc;
     this._speed=speed;
     this._size=size;
-    this._turnSpeed=0.01;
+    this._turnSpeed=tSpeed;
+    this._entityType=eType;
+    this._hitPoints=100;
 }
 
 /**
  * Rotates the entity by 1 degree
  */
 Entity.prototype.rotateRight=function(){
-    this._speed.rotate(this._turnSpeed);
+    this._speed.rotate(-this._turnSpeed);
 
 }
 
@@ -24,14 +29,14 @@ Entity.prototype.rotateRight=function(){
  * Rotates the entity by 1 degree
  */
 Entity.prototype.rotateLeft=function(){
-
+    this._speed.rotate(1*this._turnSpeed);
 }
 
 /**
  * Moves the entity forward. This method does not do collision detection.
  */
 Entity.prototype.move=function(){
-    this._location.add(this._speed)
+    this._location.add(this._speed);
 }
 
 /**
@@ -43,11 +48,11 @@ Entity.prototype.distance=function(other){
 }
 
 /**
- * The distance of the entity from a point.
+ * The distance of the entity from a vector.
  * @param other
  */
 Entity.prototype.locDistance=function(other){
-
+    return this._location.distance(other);
 }
 
 /**
@@ -57,15 +62,31 @@ Entity.prototype.locDistance=function(other){
 Entity.prototype.nearbyMove=function(other){
     var myLoc=this._location;
     var oLoc=other._location;
-    var eDist=myLoc.clone().add(this._speed).distance(oLoc);
+    var nextMove=this._location.clone();
+    nextMove.add(this._speed);
+    var eDist=nextMove.distance(oLoc);
     if(eDist-this._size-other._size<0){
         return true;
     }
     return false;
 }
 
-
 Entity.prototype.getLocation=function(){
     return this._location;
+}
+
+Entity.prototype.getHitPoints=function(){
+    return this._hitPoints;
+}
+
+Entity.prototype.addHitPoints=function(add){
+    this._hitPoints+=add;
+}
+
+Entity.prototype.getName=function(){
+    if(this._entityType!=null){
+        return this._entityType.getName();
+    }
+    return "Default Entity";
 }
 

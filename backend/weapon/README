@@ -1,0 +1,2 @@
+This folder contains objects representing attacks that can be equipped to an entity. New attacks should be designed
+so that they don't have side-effects.
