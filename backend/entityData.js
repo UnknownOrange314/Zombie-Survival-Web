@@ -103,6 +103,13 @@ function EntityData(mapSize,gridNum){
      * @param end
      */
     this.nearbyLine=function(start,end,dist){
+        for(var i=0;i<numCells;i++){
+            for(var j=0;j<numCells;j++){
+                data[j][i].forEach(function(entity){
+                    
+                })
+            }
+        }
         return Array();
     }
 

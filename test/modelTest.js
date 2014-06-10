@@ -88,6 +88,20 @@ test("Vector subtraction",function(){
     equal(d2.getY(),100);
 });
 
+test("Line distance",function(){
+    console.log("Hi");
+    var v1=new Vector(0,3);
+    var v2=new Vector(3,0);
+    var start=new Vector(0,0);
+    var end=new Vector(900,900);
+    var a=v1.lineDistance(start,end);
+    console.log("Line distance:"+a);
+    console.log(Math.sqrt(18.0)/2.0);
+    equal(v1.lineDistance(start,end),Math.sqrt(18.0)/2.0);
+    equal(v2.lineDistance(start,end),Math.sqrt(18.0)/2.0);
+
+});
+
 test("Entity distance test",function(){
     var e1=new Entity(new Vector(0.0,0.0),new Vector(1.0,0.0),3,Math.PI/180);
 
@@ -144,11 +158,6 @@ test("Zombie Move Test",function(){
 
 /**
  * These are tests on types of attacks that can be done.
- * It will be up to the game manager to find relevant targets.
- *  -During the game update phase, get range of weapon and find entities within range.
- *      -Have object that represents the range of the weapon.
- *      -Save list of entities and send it to weapon for processing.
- *
  */
 test("Melee Attack",function(){
     var m=new Melee(6,4);

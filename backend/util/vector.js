@@ -98,3 +98,26 @@ Vector.prototype.vectorTo=function(dest){
 Vector.prototype.toString=function(){
     return this._x+":"+this._y;
 }
+
+/**
+ * Calculates the distance of the point at the end of the vector to a line.
+ * @param lData Data about the line.
+ */
+Vector.prototype.lineDistance=function(start,end){
+    var slope=(end._y-start._y)/(end._x-start._x);
+    console.log("a:"+slope);
+    var a=1.0*slope;
+    var b=-1.0;
+    var c=1.0*(start._y-slope*start._x);
+
+    console.log(a+":"+this._x+" "+b+":"+this._y);
+    var num=Math.abs(a*this._x+b*this._y+c);
+    var den=Math.sqrt(a*a+b*b);
+
+    console.log(typeof num);
+    console.log(typeof den);
+    console.log(num+":"+den);
+    var a=num/den;
+    console.log(a);
+    return a;
+}

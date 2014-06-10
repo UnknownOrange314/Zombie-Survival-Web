@@ -22,13 +22,13 @@
     <favorites_list name="ZombieSurvival" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.43073592">
+    <splitter split-orientation="vertical" split-proportion="0.50330395">
       <split-first>
         <leaf>
           <file leaf-file-name="driver.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/driver.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+                <state line="9" column="0" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="306">
                   <folding />
                 </state>
               </provider>
@@ -55,7 +55,7 @@
           <file leaf-file-name="vector.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backend/util/vector.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="-5.0" vertical-offset="232" max-vertical-offset="1785">
+                <state line="114" column="12" selection-start="2506" selection-end="2506" vertical-scroll-proportion="0.0" vertical-offset="1747" max-vertical-offset="2176">
                   <folding />
                 </state>
               </provider>
@@ -64,7 +64,7 @@
           <file leaf-file-name="gameManager.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backend/gameManager.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="27" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+                <state line="9" column="27" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="442">
                   <folding />
                 </state>
               </provider>
@@ -81,10 +81,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="entityData.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="entityData.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/backend/entityData.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="55" column="28" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.49595687" vertical-offset="751" max-vertical-offset="1955">
+                <state line="108" column="20" selection-start="3119" selection-end="3119" vertical-scroll-proportion="0.5949367" vertical-offset="1601" max-vertical-offset="2074">
                   <folding />
                 </state>
               </provider>
@@ -94,7 +94,9 @@
             <entry file="file://$PROJECT_DIR$/backend/weapon/melee.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="20" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="578">
-                  <folding />
+                  <folding>
+                    <marker date="1402240777336" expanded="true" signature="117:170" placeholder="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -124,7 +126,7 @@
           <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test/test.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="54" selection-start="303" selection-end="303" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="459">
+                <state line="12" column="54" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="459">
                   <folding />
                 </state>
               </provider>
@@ -139,10 +141,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="modelTest.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="modelTest.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/modelTest.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="254" column="54" selection-start="6683" selection-end="6683" vertical-scroll-proportion="0.4827586" vertical-offset="4080" max-vertical-offset="4726">
+                <state line="159" column="56" selection-start="4018" selection-end="4018" vertical-scroll-proportion="-0.7209877" vertical-offset="2995" max-vertical-offset="4879">
                   <folding />
                 </state>
               </provider>
@@ -176,20 +178,18 @@
         <option value="$PROJECT_DIR$/backend/EntityData.js" />
         <option value="$PROJECT_DIR$/test/test.html" />
         <option value="$PROJECT_DIR$/backend/weapon/melee.js" />
-        <option value="$PROJECT_DIR$/backend/util/vector.js" />
         <option value="$PROJECT_DIR$/backend/gameManager.js" />
         <option value="$PROJECT_DIR$/backend/util/hashSet.js" />
         <option value="$PROJECT_DIR$/backend/entity.js" />
-        <option value="$PROJECT_DIR$/backend/entityData.js" />
+        <option value="$PROJECT_DIR$/backend/util/vector.js" />
         <option value="$PROJECT_DIR$/test/modelTest.js" />
+        <option value="$PROJECT_DIR$/backend/entityData.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1040" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -335,6 +335,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -345,23 +353,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -383,15 +383,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="0" width="1040" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15113218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28614157" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -400,9 +399,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -422,6 +422,73 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/backend/gameManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/weapon/pistol.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="476">
+          <folding>
+            <marker date="1402190393148" expanded="true" signature="129:450" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/entityData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="28" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.0" vertical-offset="751" max-vertical-offset="1955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/weapon/melee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="578">
+          <folding>
+            <marker date="1402240777336" expanded="true" signature="117:170" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/util/hashSet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="111" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="54" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/entity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/modelTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="254" column="54" selection-start="6683" selection-end="6683" vertical-scroll-proportion="0.0" vertical-offset="4080" max-vertical-offset="4726">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/driver.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
@@ -609,16 +676,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HumanPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/weapon/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="37" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-          <folding />
-        </state>
+        <state line="1" column="37" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/zombie.js">
@@ -646,14 +709,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="54" selection-start="303" selection-end="303" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/util/vector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="-5.0" vertical-offset="232" max-vertical-offset="1785">
+        <state line="12" column="54" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
@@ -682,7 +738,9 @@
     <entry file="file://$PROJECT_DIR$/backend/weapon/melee.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="578">
-          <folding />
+          <folding>
+            <marker date="1402240777336" expanded="true" signature="117:170" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -693,16 +751,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/entityData.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="28" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.49595687" vertical-offset="751" max-vertical-offset="1955">
+        <state line="577" column="0" selection-start="9086" selection-end="9086" vertical-scroll-proportion="0.33153638" vertical-offset="9686" max-vertical-offset="15929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/util/vector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="12" selection-start="2506" selection-end="2506" vertical-scroll-proportion="0.0" vertical-offset="1747" max-vertical-offset="2176">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/modelTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="54" selection-start="6683" selection-end="6683" vertical-scroll-proportion="0.4827586" vertical-offset="4080" max-vertical-offset="4726">
+        <state line="159" column="56" selection-start="4018" selection-end="4018" vertical-scroll-proportion="-0.7209877" vertical-offset="2995" max-vertical-offset="4879">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/entityData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="20" selection-start="3119" selection-end="3119" vertical-scroll-proportion="0.5949367" vertical-offset="1601" max-vertical-offset="2074">
           <folding />
         </state>
       </provider>
